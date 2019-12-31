@@ -1,6 +1,7 @@
 #include <iostream>
+#include "lib/greeting.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    std::cout << greeting << std::endl;
     return 0;
 }
