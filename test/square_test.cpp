@@ -45,3 +45,43 @@ TEST(square, plus_plus) {
     ASSERT_EQ(SquareH1,  ++square);
     ASSERT_EQ(SquareA2,  ++square);
 }
+
+TEST(square, max_matric) {
+    ASSERT_EQ(0, maxMetric(SquareA1, SquareA1));
+    ASSERT_EQ(0, maxMetric(SquareH8, SquareH8));
+
+    ASSERT_EQ(1, maxMetric(SquareA1, SquareA2));
+    ASSERT_EQ(1, maxMetric(SquareA1, SquareB1));
+
+    ASSERT_EQ(1, maxMetric(SquareA1, SquareB2));
+    ASSERT_EQ(2, maxMetric(SquareA1, SquareC3));
+    ASSERT_EQ(3, maxMetric(SquareA1, SquareD4));
+    ASSERT_EQ(4, maxMetric(SquareA1, SquareE5));
+    ASSERT_EQ(5, maxMetric(SquareA1, SquareF6));
+    ASSERT_EQ(6, maxMetric(SquareA1, SquareG7));
+    ASSERT_EQ(7, maxMetric(SquareA1, SquareH8));
+}
+
+TEST(square, rank) {
+    ASSERT_EQ(Rank1, rank(SquareA1));
+    ASSERT_EQ(Rank1, rank(SquareB1));
+    ASSERT_EQ(Rank2, rank(SquareB2));
+    ASSERT_EQ(Rank3, rank(SquareC3));
+    ASSERT_EQ(Rank4, rank(SquareD4));
+    ASSERT_EQ(Rank5, rank(SquareE5));
+    ASSERT_EQ(Rank6, rank(SquareF6));
+    ASSERT_EQ(Rank7, rank(SquareG7));
+    ASSERT_EQ(Rank8, rank(SquareH8));
+}
+
+TEST(square, file) {
+    ASSERT_EQ(FileA, file(SquareA1));
+    ASSERT_EQ(FileB, file(SquareB1));
+    ASSERT_EQ(FileB, file(SquareB2));
+    ASSERT_EQ(FileC, file(SquareC3));
+    ASSERT_EQ(FileD, file(SquareD4));
+    ASSERT_EQ(FileE, file(SquareE5));
+    ASSERT_EQ(FileF, file(SquareF6));
+    ASSERT_EQ(FileG, file(SquareG7));
+    ASSERT_EQ(FileH, file(SquareH8));
+}

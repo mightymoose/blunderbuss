@@ -1,12 +1,10 @@
-//
-// Created by Mathew Morris on 12/31/19.
-//
-
 #ifndef BLUNDERBUSS_SQUARE_H
 #define BLUNDERBUSS_SQUARE_H
 
 #include "file.h"
 #include "rank.h"
+
+extern int maxMetricLookup[64][64];
 
 enum Square : int {
     SquareA1, SquareB1,  SquareC1, SquareD1, SquareE1, SquareF1, SquareG1,  SquareH1,
@@ -24,5 +22,15 @@ constexpr Square makeSquare(File file, Rank rank) {
 }
 
 inline Square& operator++(Square& square) { return square = Square(int(square) + 1); }
+
+inline int maxMetric(Square firstSquare, Square secondSquare) {
+    return maxMetricLookup[firstSquare][secondSquare];
+}
+
+void initializeSquares();
+
+Rank rank(Square square);
+
+File file(Square square);
 
 #endif //BLUNDERBUSS_SQUARE_H
