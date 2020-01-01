@@ -4,6 +4,7 @@
 #include "bitboards.h"
 
 BitBoard generateKnightMoves(Square square);
+BitBoard generateKingMoves(Square square);
 
 void initializeMoveGeneration();
 
