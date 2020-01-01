@@ -3,8 +3,14 @@ project(blunderbuss)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_subdirectory(lib)
 add_executable(blunderbuss main.cpp)
+
+add_subdirectory(lib)
+
+target_link_libraries(
+        blunderbuss
+        blunderbuss_lib
+)
 
 include(cmake/googletest.cmake)
 fetch_googletest(

@@ -1,7 +1,8 @@
 add_executable(
         unit_tests
         greeting_test.cpp
-)
+        bitboards_test.cpp
+        square_test.cpp rank_test.cpp file_test.cpp main.cpp)
 
 target_link_libraries(
         unit_tests

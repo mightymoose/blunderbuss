@@ -2,5 +2,5 @@
 #include "../lib/greeting.h"
 
 TEST(greeting, correct_greeting) {
-    ASSERT_STREQ(greeting, "Hello World!");
+    ASSERT_STREQ("Hello World!",  greeting);
 }
