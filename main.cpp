@@ -1,7 +1,9 @@
 #include <iostream>
-#include "lib/greeting.h"
+#include "lib/bitboards.h"
 
 int main() {
-    std::cout << greeting << std::endl;
-    return 0;
+    initializeBitboards();
+    BitBoard b = squareBitBoard[SquareD4] | squareBitBoard[SquareA2] | squareBitBoard[SquareH8];
+
+    std::cout << prettyPrint(b) << std::endl;
 }
