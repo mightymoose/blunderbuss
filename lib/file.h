@@ -1,7 +1,3 @@
-//
-// Created by Mathew Morris on 12/31/19.
-//
-
 #ifndef BLUNDERBUSS_FILE_H
 #define BLUNDERBUSS_FILE_H
 

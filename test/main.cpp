@@ -1,9 +1,9 @@
 #include "gtest/gtest.h"
-#include "../lib/bitboards.h"
+#include "../lib/engine.h"
 
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
-    initializeBitboards();
+    initializeEngine();
     int ret = RUN_ALL_TESTS();
     return ret;
 }
