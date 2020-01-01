@@ -220,3 +220,221 @@ TEST(attacks, knight_moves) {
     ASSERT_EQ(prettyKnightMovesFromH8, expectedKnightMovesFromH8);
 }
 
+TEST(attacks, king_moves) {
+    BitBoard kingMovesFromA1 = generateKingMoves(SquareA1);
+    std::string prettyKingMovesFromA1 = prettyPrint(kingMovesFromA1);
+    std::string expectedKingMovesFromA1 =
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 8 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 7 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 6 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 5 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 4 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 3 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 2 | X | X |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 1 |   | X |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string("     A   B   C   D   E   F   G   H\n");
+
+    ASSERT_EQ(prettyKingMovesFromA1, expectedKingMovesFromA1);
+
+    BitBoard kingMovesFromD1 = generateKingMoves(SquareD1);
+    std::string prettyKingMovesFromD1 = prettyPrint(kingMovesFromD1);
+    std::string expectedKingMovesFromD1 =
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 8 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 7 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 6 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 5 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 4 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 3 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 2 |   |   | X | X | X |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 1 |   |   | X |   | X |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string("     A   B   C   D   E   F   G   H\n");
+
+    ASSERT_EQ(prettyKingMovesFromD1, expectedKingMovesFromD1);
+
+    BitBoard kingMovesFromH1 = generateKingMoves(SquareH1);
+    std::string prettyKingMovesFromH1 = prettyPrint(kingMovesFromH1);
+    std::string expectedKingMovesFromH1 =
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 8 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 7 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 6 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 5 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 4 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 3 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 2 |   |   |   |   |   |   | X | X |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 1 |   |   |   |   |   |   | X |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string("     A   B   C   D   E   F   G   H\n");
+
+    ASSERT_EQ(prettyKingMovesFromH1, expectedKingMovesFromH1);
+
+    BitBoard kingMovesFromA4 = generateKingMoves(SquareA4);
+    std::string prettyKingMovesFromA4 = prettyPrint(kingMovesFromA4);
+    std::string expectedKingMovesFromA4 =
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 8 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 7 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 6 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 5 | X | X |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 4 |   | X |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 3 | X | X |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 2 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 1 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string("     A   B   C   D   E   F   G   H\n");
+
+    ASSERT_EQ(prettyKingMovesFromA4, expectedKingMovesFromA4);
+
+    BitBoard kingMovesFromD4 = generateKingMoves(SquareD4);
+    std::string prettyKingMovesFromD4 = prettyPrint(kingMovesFromD4);
+    std::string expectedKingMovesFromD4 =
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 8 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 7 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 6 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 5 |   |   | X | X | X |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 4 |   |   | X |   | X |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 3 |   |   | X | X | X |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 2 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 1 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string("     A   B   C   D   E   F   G   H\n");
+
+    ASSERT_EQ(prettyKingMovesFromD4, expectedKingMovesFromD4);
+
+    BitBoard kingMovesFromH4 = generateKingMoves(SquareH4);
+    std::string prettyKingMovesFromH4 = prettyPrint(kingMovesFromH4);
+    std::string expectedKingMovesFromH4 =
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 8 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 7 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 6 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 5 |   |   |   |   |   |   | X | X |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 4 |   |   |   |   |   |   | X |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 3 |   |   |   |   |   |   | X | X |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 2 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 1 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string("     A   B   C   D   E   F   G   H\n");
+
+    ASSERT_EQ(prettyKingMovesFromH4, expectedKingMovesFromH4);
+
+    BitBoard kingMovesFromA8 = generateKingMoves(SquareA8);
+    std::string prettyKingMovesFromA8 = prettyPrint(kingMovesFromA8);
+    std::string expectedKingMovesFromA8 =
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 8 |   | X |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 7 | X | X |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 6 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 5 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 4 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 3 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 2 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 1 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string("     A   B   C   D   E   F   G   H\n");
+
+    ASSERT_EQ(prettyKingMovesFromA8, expectedKingMovesFromA8);
+
+    BitBoard kingMovesFromD8 = generateKingMoves(SquareD8);
+    std::string prettyKingMovesFromD8 = prettyPrint(kingMovesFromD8);
+    std::string expectedKingMovesFromD8 =
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 8 |   |   | X |   | X |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 7 |   |   | X | X | X |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 6 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 5 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 4 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 3 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 2 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 1 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string("     A   B   C   D   E   F   G   H\n");
+
+    ASSERT_EQ(prettyKingMovesFromD8, expectedKingMovesFromD8);
+
+    BitBoard kingMovesFromH8 = generateKingMoves(SquareH8);
+    std::string prettyKingMovesFromH8 = prettyPrint(kingMovesFromH8);
+    std::string expectedKingMovesFromH8 =
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 8 |   |   |   |   |   |   | X |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 7 |   |   |   |   |   |   | X | X |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 6 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 5 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 4 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 3 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 2 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string(" 1 |   |   |   |   |   |   |   |   |\n") +
+            std::string("   +---+---+---+---+---+---+---+---+\n") +
+            std::string("     A   B   C   D   E   F   G   H\n");
+
+    ASSERT_EQ(prettyKingMovesFromH8, expectedKingMovesFromH8);
+}
+
